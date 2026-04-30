@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "intent_policy": {
+    "chat": "default supportive dialogue",
+    "plan": "user asks for concrete next steps or decisions",
+    "emergency": "any direct self-harm or severe danger signal"
+  },
+  "profile_fields": {
+    "goal": "what the user hopes to improve",
+    "problem_category": "emotion|cognition|behavior|attention|social|general",
+    "state_keywords": "short phrases describing current state",
+    "severity_score": "0-10 subjective intensity",
+    "time_available_min": "minutes user can spend now",
+    "constraints": {
+      "speech_ok": "whether speaking aloud is feasible",
+      "public_env": "whether user is in public environment",
+      "health_limits": "health limitations relevant to interventions",
+      "resources": "available tools/support"
+    },
+    "risk_flags": "green|yellow|red"
+  },
+  "risk_signals": {
+    "red": [
+      "explicit desire to die",
+      "self-harm intent",
+      "immediate danger language"
+    ],
+    "yellow": [
+      "hopelessness with loss of control",
+      "persistent severe distress",
+      "social withdrawal plus crisis hints"
+    ],
+    "green": [
+      "no immediate safety concerns stated"
+    ]
+  },
+  "extraction_rules": [
+    "Only fill fields supported by explicit dialogue evidence.",
+    "If uncertain, leave field missing or null.",
+    "Do not infer medical diagnoses.",
+    "Prefer concise, high-signal keywords."
+  ]
+}

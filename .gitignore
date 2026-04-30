@@ -4,3 +4,9 @@ __pycache__/
 *.pyc
 .env
 simulation_logs/
+.pytest_cache/
+**/__pycache__/
+logs/*.jsonl
+data/sessions/*.json
+data/users.json
+.claude/worktrees/

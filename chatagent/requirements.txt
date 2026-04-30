@@ -1,4 +1,4 @@
-# 心理咨询对话 API（api_server + dialog_agent）
+# Counseling dialogue API (api_server + dialog_agent)
 fastapi>=0.100.0
 uvicorn[standard]>=0.22.0
 pydantic>=2.0.0
