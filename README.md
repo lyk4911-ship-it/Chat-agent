@@ -2,6 +2,33 @@
 
 This repository contains a session-based counseling chat system built with object-oriented design.
 
+## Quick Start (For Grading)
+
+1) Create and activate a virtual environment.
+
+- Windows (PowerShell):
+  - `python -m venv .venv`
+  - `.venv\Scripts\Activate.ps1`
+
+2) Install dependencies.
+
+- `pip install -r chatagent/requirements.txt`
+
+3) (Optional) Set API environment variables for real LLM responses.
+
+- `OPENAI_API_KEY`
+- `OPENAI_BASE_URL` (default in code: `https://api.deepseek.com/v1`)
+- `OPENAI_MODEL` (default in code: `deepseek-chat`)
+
+4) Run the HTTP app.
+
+- `python chatagent/api_server.py`
+- Open: `http://127.0.0.1:8000`
+
+5) Run tests.
+
+- `python -m pytest chatagent/tests -q`
+
 ## Project Layout
 
 - `chatagent/`: main application code
